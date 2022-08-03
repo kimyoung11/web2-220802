@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.first .second .third{
+    width: 33%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
