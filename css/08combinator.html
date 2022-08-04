@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combinator 및 Specificity</title>
+        <style>
+            h1{
+                font-size: 2em;
+                background-color: lightgray !important;
+            }
+            p{
+                font-size: 2em;
+            }
+
+            h1,p{
+                color: blue !important;
+            }
+
+            .note{
+                background-color: yellow;
+            }
+
+            h1.note{
+                background-color: lightblue;
+            }
+
+            /* p요소이면서 note 클래스 */
+            p.note{
+                border: 5px solid lightcoral;
+            }
+
+            h1.note.fire{
+                color: red;
+            }
+            /* 선택자 우선순위 */
+            /*
+            !important -> 우선순위 가장 높음(속성 뒤에 위치.)
+            !important >>>> id >> class >> tag >> 전체선택자(*)
+            */
+
+            h4{
+                font-size: 50px !important;
+            }
+            
+            #ok{
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="note">Lorem, ipsum.</h1>
+        <h1 class="note fire">Perspiciatis, id.</h1>
+        <h1 id="head">Id, quod?</h1>
+        <h4 id="ok">Voluptates, sequi.</h1>
+        <h4>Modi, deserunt.</h1>
+        <p class="note">Lorem, ipsum dolor.</p>
+        <p>Tempore, quisquam impedit!</p>
+        <p>Tempora, fugit suscipit?</p>
+        <p>Quibusdam, cum est.</p>
+        <p>Id, incidunt quibusdam?</p>
+    </body>
+<html>

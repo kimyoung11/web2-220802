@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Descendant-selector(자손 선택자)</title>
+        <style>
+            .error > p{
+                text-decoration: line-through;
+            }
+
+            .error p{
+                border: 2px solid;
+            }
+
+            ul span{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .note>.error>p>lorem^^^.error>.note>p>lorem -->
+        <div class="note">
+            <div class="error">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur nostrum labore, impedit vitae officiis magnam quasi. Nihil ducimus fugit, nostrum saepe, aliquam quaerat tempora enim, similique illo magni quisquam.
+                </p>
+            </div>
+        </div>
+        <div class="error">
+            <div class="note">
+                <p>
+                    Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+        </div>
+        <div>
+            <span>I will match</span>
+            <ul>
+                <li>
+                    <span>I will match too</span>
+                </li>
+            </ul>
+        </div>
+        
+    </body>
+<html>
