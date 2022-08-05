@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inline(박스 모델)</title>
+        <style>
+            a:nth-child(2n-1){
+                background-color: aqua;
+            }
+            a:nth-child(2n){
+                background-color: gold;
+            }
+            a{
+                width: 200px;
+                height: 50px;
+                padding: 50px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">Lorem.</a>
+        <a href="#">YYYYYYYYYYY</a>
+        <a href="#">Lorem.</a>
+        <img src="#" alt="GOGOGOGOGO">
+        <span>aaaaaaaaaaa</span>
+        <img src="#" alt="GOGOGOGOGO">
+        <h1>inline 요소</h1>
+        <p>필요한 만큼의 너비만 가지고 같은 줄에 배치.</p>
+        <p>width, height, padding, margin이 의도대로 적용안됨</p>
+        <p>Box model : inline / block / inline-block</p>
+    </body>
+<html>
